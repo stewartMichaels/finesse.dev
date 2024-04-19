@@ -37,7 +37,7 @@ function Header() {
           }}
           id="/"
         >
-          <div  className="logo-wrapper text-[20px] lg:text-[32px] font-semibold text-primary-hover cursor-pointer font-kodemono">
+          <div className="logo-wrapper text-[20px] lg:text-[32px] font-semibold text-primary-hover cursor-pointer font-kodemono">
             finesse.<span className="text-primary">dev</span>
           </div>
         </a>

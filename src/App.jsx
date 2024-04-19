@@ -12,23 +12,23 @@ import Contact from "./pages/Contact.jsx";
 function App() {
   return (
     <div className="snap-y  h-screen   snap-mandatory overflow-y-scroll bg-gradient-to-r from-[hsl(0,0%,97%)] scroll-smooth to-[hsl(0,0%,93%)] z-0">
-      <Header  />
-      <section className="snap-center "id="hero">
-      <Hero  />
+      <Header />
+      <section className="snap-center" id="hero">
+        <Hero />
       </section>
-     <section className="snap-center >
-      <About />
+      <section className="snap-center">
+        <About />
       </section>
-      <section className="snap-center >
+      <section className="snap-center">
         <Services />
-        </section>
-        <section className="snap-center >
+      </section>
+      <section className="snap-center">
         <Projects />
-        </section>
-          <section className="snap-center >
+      </section>
+      <section className="snap-center">
         <Contact />
-        </section>
-      </div>
+      </section>
+    </div>
   );
 }
 

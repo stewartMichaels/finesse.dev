@@ -12,15 +12,13 @@ function Hero() {
 
   return (
     <>
-      <section  ref={hero} className="pt-[140px] ">
+      <section ref={hero} className="pt-[140px]">
         <div className=" content-wrapper flex items-center justify-center mx-[10%] px- bg-[#cbfaff68] rounded-xl px-[2%]">
           <div className="left-content-wrapper leading-relaxed font-poppins">
             <h2>
               <span className="text-[48px] font-semibold">
                 Elevate Your Digital Presence With Us
               </span>
-              {/* <br />
-            <span className="text-[78px] font-bold">finesse.dev</span> */}
             </h2>
             <p>
               Are you ready to take your business to the next level? Our expert
