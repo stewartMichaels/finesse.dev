@@ -12,8 +12,8 @@ function Hero() {
 
   return (
     <>
-      <section id="hero" ref={hero} className="pt-[140px]">
-        <div className="content-wrapper flex items-center justify-center mx-[10%] px- bg-[#cbfaff68] rounded-xl px-[2%]">
+      <section  ref={hero} className="pt-[140px] ">
+        <div className=" content-wrapper flex items-center justify-center mx-[10%] px- bg-[#cbfaff68] rounded-xl px-[2%]">
           <div className="left-content-wrapper leading-relaxed font-poppins">
             <h2>
               <span className="text-[48px] font-semibold">

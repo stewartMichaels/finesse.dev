@@ -29,7 +29,7 @@ function Header() {
     <>
       <header className="flex justify-between items-center w-[100%] h-[120px] px-[13%] py-0 fixed bg-white">
         <a
-          href="/"
+          href="#hero"
           ref={hero}
           className="text-gray-800 hover:text-gray-600 font-bold cursor-pointer"
           onClick={() => {
@@ -37,7 +37,7 @@ function Header() {
           }}
           id="/"
         >
-          <div className="logo-wrapper text-[20px] lg:text-[32px] font-semibold text-primary-hover cursor-pointer font-kodemono">
+          <div  className="logo-wrapper text-[20px] lg:text-[32px] font-semibold text-primary-hover cursor-pointer font-kodemono">
             finesse.<span className="text-primary">dev</span>
           </div>
         </a>
