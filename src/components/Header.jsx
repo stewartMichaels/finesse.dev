@@ -21,7 +21,7 @@ function Header() {
 
   return (
     <>
-      <header className="flex justify-between items-center w-[100%] px-40 bg-white sticky top-0">
+      <header className="flex justify-between  items-center w-[100%] px-40 bg-white sticky top-0">
         <a
           href="#hero"
           ref={hero}
@@ -32,7 +32,7 @@ function Header() {
             finesse.<span className="text-primary">dev</span>
           </div>
         </a>
-        <div className="menu-container  flex justify-end items-center w-[600px] h-[56px] gap-3 lg:gap-20">
+        <div className="menu-container  flex justify-end items-center w-[600px] h-[96px] gap-3 lg:gap-20">
           <span className="flex lg:items-center justify-center gap-2 lg:gap-10">
             <IconContext.Provider
               value={{
