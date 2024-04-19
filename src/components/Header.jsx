@@ -19,15 +19,6 @@ function Header() {
   const projects = useRef();
   const contact = useRef();
 
-  // const scrollHandler = (ref) => {
-  //   // console.log(ref.current.offsetTop);
-  //   // console.log(ref);
-  //   window.scrollTo({
-  //     top: ref.current.offsetTop,
-  //     behavior: "smooth",
-  //   });
-  // };
-
   const scrollHandler = (ref) => {
     if (ref.current) {
       ref.current.scrollIntoView({ behavior: "smooth" });
@@ -39,7 +30,7 @@ function Header() {
       <header className="flex justify-between items-center w-[100%] h-[120px] px-[13%] py-0 fixed bg-white">
         <a
           href="/"
-          ref={about}
+          ref={hero}
           className="text-gray-800 hover:text-gray-600 font-bold cursor-pointer"
           onClick={() => {
             scrollHandler(hero);
