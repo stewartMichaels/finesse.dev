@@ -19,29 +19,23 @@ function Header() {
   const projects = useRef();
   const contact = useRef();
 
-  const scrollHandler = (ref) => {
-    if (ref.current) {
-      ref.current.scrollIntoView({ behavior: "smooth" });
-    }
-  };
+ 
 
   return (
-    <>
-      <header className="flex justify-between items-center w-[100%] h-[120px] px-[13%] py-0 fixed bg-white">
+    <> 
+      <header className="flex justify-between  items-center w-[100%]  px-40   bg-white">
         <a
           href="#hero"
           ref={hero}
           className="text-gray-800 hover:text-gray-600 font-bold cursor-pointer"
-          onClick={() => {
-            scrollHandler(hero);
-          }}
+          
           id="/"
         >
-          <div className="logo-wrapper text-[20px] lg:text-[32px] font-semibold text-primary-hover cursor-pointer font-kodemono">
+          <div className="logo-wrapper  text-[20px] lg:text-[32px] font-semibold text-primary-hover cursor-pointer font-kodemono">
             finesse.<span className="text-primary">dev</span>
           </div>
         </a>
-        <div className="menu-container flex justify-end items-center w-[600px] h-[56px] gap-3 lg:gap-20">
+        <div className="menu-container  flex justify-end items-center w-[600px] h-[56px] gap-3 lg:gap-20">
           <span className="flex lg:items-center justify-center gap-2 lg:gap-10">
             <IconContext.Provider
               value={{
@@ -77,7 +71,7 @@ function Header() {
           </span>
 
           {showMenu && (
-            <div className="fixed top-0 left-0 w-full h-full bg-baby-blue z-40 bg-opacity-90  flex justify-center items-center">
+            <div className="fixed top-0 left-0 w-full h-screen o bg-baby-blue z-40 bg-opacity-90  flex justify-center items-center">
               {/* <div className="bg-blue-100 rounded-lg p-6 shadow-lg"> */}
               <div>
                 <ul className="flex flex-col space-y-4 text-center">

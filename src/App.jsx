@@ -11,17 +11,15 @@ import Contact from "./pages/Contact.jsx";
 
 function App() {
   return (
-<<<<<<< HEAD
-    <div className="snap-y  h-screen   snap-mandatory overflow-y-scroll bg-gradient-to-r from-[hsl(0,0%,97%)] scroll-smooth to-[hsl(0,0%,93%)] z-0">
-      <Header />
-      <section className="snap-center" id="hero">
+    <>
+      <div className="sticky overflow-hidden">
+        <Header />
+        </div>
+    <div className="snap-y  h-screen   snap-mandatory overflow-y-scroll bg-gradient-to-r from-[hsl(0,0%,97%)] scroll-smooth to-[hsl(0,0%,93%)] z-0  scrollbar-track-gray-400/20 scrollbar-thumb-[#8eaadb] scrollbar">
+      
+      <section className="snap-start" id="hero">
+      
         <Hero />
-=======
-    <div className="snap-y  h-screen   snap-mandatory overflow-y-scroll bg-gradient-to-r from-[hsl(0,0%,97%)] scroll-smooth to-[hsl(0,0%,93%)] scrollbar scrollbar-track-gray-400/20 scrollbar-thumb-[#1d1b5d] z-0">
-      <Header  />
-      <section className="snap-start "id="hero">
-      <Hero  />
->>>>>>> 921ee66fd9f7f654119f1cef9b8a0776771a40b9
       </section>
       <section className="snap-center">
         <About />
@@ -35,7 +33,8 @@ function App() {
       <section className="snap-center">
         <Contact />
       </section>
-    </div>
+      </div>
+      </>
   );
 }
 
