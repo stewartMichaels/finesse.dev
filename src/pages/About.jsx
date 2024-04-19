@@ -26,8 +26,8 @@ function About() {
                 className="w-full rounded-lg shadow-lg"
               />
             </div>
-            <div className="md:w-1/2">
-              <p className="text-gray-700 mb-6">
+            <div className="md:w-1/2 p-10">
+              <p className="text-gray-700 mb-6 ">
                 At finesse.dev, we believe in the power of technology to
                 transform businesses and enhance user experiences. Our team of
                 skilled professionals combines creativity, technical expertise,

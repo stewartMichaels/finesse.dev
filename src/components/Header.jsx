@@ -37,12 +37,12 @@ function Header() {
           }}
           id="/"
         >
-          <div className="logo-wrapper text-[32px] font-semibold text-primary-hover cursor-pointer font-kodemono">
+          <div className="logo-wrapper text-[20px] lg:text-[32px] font-semibold text-primary-hover cursor-pointer font-kodemono">
             finesse.<span className="text-primary">dev</span>
           </div>
         </a>
-        <div className="menu-container flex justify-end items-center w-[600px] h-[56px] gap-20">
-          <span className="flex items-center justify-center gap-10">
+        <div className="menu-container flex justify-end items-center w-[600px] h-[56px] gap-3 lg:gap-20">
+          <span className="flex lg:items-center justify-center gap-2 lg:gap-10">
             <IconContext.Provider
               value={{
                 color: "#000",
