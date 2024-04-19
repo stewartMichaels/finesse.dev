@@ -5,7 +5,7 @@ function About() {
 
   return (
     <>
-      <section id="about" ref={about} className="pt-[140px]">
+      <section id="about" ref={about}>
         {/* <div className="hidden py-12 md:py-20 h-[100vh]"></div>  */}
         <div className="container mx-auto px-4">
           <div className="text-center mb-8 md:mb-12">

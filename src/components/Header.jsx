@@ -19,16 +19,13 @@ function Header() {
   const projects = useRef();
   const contact = useRef();
 
- 
-
   return (
-    <> 
-      <header className="flex justify-between  items-center w-[100%]  px-40   bg-white">
+    <>
+      <header className="flex justify-between items-center w-[100%] px-40 bg-white sticky top-0">
         <a
           href="#hero"
           ref={hero}
           className="text-gray-800 hover:text-gray-600 font-bold cursor-pointer"
-          
           id="/"
         >
           <div className="logo-wrapper  text-[20px] lg:text-[32px] font-semibold text-primary-hover cursor-pointer font-kodemono">
