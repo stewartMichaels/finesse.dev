@@ -13,15 +13,11 @@ function Header() {
     setShowMenu(!showMenu);
   };
 
-  const hero = useRef();
-  const about = useRef();
-  const services = useRef();
-  const projects = useRef();
-  const contact = useRef();
+
 
   return (
     <>
-      <header className="flex justify-between  items-center w-[100%] px-40 bg-white sticky top-0">
+      <header className="flex justify-between  items-center w-[100%] px-40 bg-white sticky overflow-hidden">
         <a
           href="#hero"
           ref={hero}

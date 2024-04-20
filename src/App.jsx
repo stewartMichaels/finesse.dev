@@ -12,9 +12,10 @@ import Contact from "./pages/Contact.jsx";
 function App() {
   return (
     <>
-     
+    
+      <Header />
       <div className="snap-y  h-screen   snap-mandatory overflow-y-scroll bg-gradient-to-r from-[hsl(0,0%,97%)] scroll-smooth to-[hsl(0,0%,93%)] z-0  scrollbar-track-gray-400/20 scrollbar-thumb-[#8eaadb] scrollbar">
-      <Header  />
+   
         <section className="snap-start" id="hero">
           <Hero />
         </section>
