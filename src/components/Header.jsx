@@ -1,136 +1,140 @@
 // react imports
-import React, { useRef, useState } from "react";
+import { useState, useRef } from "react";
+import { FaBars, FaTimes } from "react-icons/fa";
 
-// icons import from react-icons
-import { FaBars, FaFacebookSquare, FaInstagram, FaTimes } from "react-icons/fa";
-import { IoMailOutline } from "react-icons/io5";
-import { IconContext } from "react-icons";
+// framer motion import
+import { motion } from "framer-motion";
+import Home from "../pages/Home";
+import About from "../pages/About";
+import Services from "../pages/Services";
+import Contact from "../pages/Contact";
+import Technologies from "../pages/Technologies";
 
-function Header() {
-  const [showMenu, setShowMenu] = useState(false);
+const Header = () => {
+  const homeRef = useRef(null);
+  const aboutRef = useRef(null);
+  const technologiesRef = useRef(null);
+  const servicesRef = useRef(null);
+  const contactRef = useRef(null);
 
-  const toggleMenu = () => {
-    setShowMenu(!showMenu);
+  const handleScroll = (ref) => {
+    ref.current.scrollIntoView({ behavior: "smooth" });
   };
 
+  const [isNavOpen, setIsNavOpen] = useState(false);
 
+  const toggleMenu = () => {
+    setIsNavOpen(!isNavOpen);
+  };
 
   return (
     <>
-      <header className="flex justify-between  items-center w-[100%] px-40 bg-white sticky overflow-hidden">
-        <a
-          href="#hero"
-          ref={hero}
-          className="text-gray-800 hover:text-gray-600 font-bold cursor-pointer"
-          id="/"
-        >
-          <div className="logo-wrapper  text-[20px] lg:text-[32px] font-semibold text-primary-hover cursor-pointer font-kodemono">
-            finesse.<span className="text-primary">dev</span>
+      <div>
+        <nav className="fixed top-0 left-0 right-0 flex justify-between items-center h-[90px] px-10 lg:px-[200px] bg-white z-20">
+          <motion.h1
+            whileHover={{ scale: 1.1 }}
+            whileTap={{ scale: 0.9 }}
+            className="text-xl cursor-pointer font-kode"
+            onClick={() => handleScroll(homeRef)}
+          >
+            finesse.<span>dev</span>
+          </motion.h1>
+          <motion.div
+            whileHover={{ scale: 1.2 }}
+            whileTap={{ scale: 0.9 }}
+            className="text-2xl cursor-pointer"
+            onClick={toggleMenu}
+          >
+            {isNavOpen ? <FaTimes /> : <FaBars />}
+          </motion.div>
+        </nav>
+
+        {isNavOpen && (
+          <div>
+            <motion.ul
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ duration: 0.5 }}
+              className="fixed top-0 left-0 right-0 z-10 flex flex-col justify-center items-center w-full h-[100vh] bg-white text-center gap-4"
+            >
+              <motion.li whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }}>
+                <button
+                  onClick={() => {
+                    handleScroll(homeRef);
+                    toggleMenu();
+                  }}
+                >
+                  Home
+                </button>
+              </motion.li>
+              <motion.li whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }}>
+                <button
+                  onClick={() => {
+                    handleScroll(aboutRef);
+                    toggleMenu();
+                  }}
+                >
+                  About
+                </button>
+              </motion.li>
+              {/* <li>
+                <button
+                  onClick={() => {
+                    handleScroll(technologiesRef);
+                    toggleMenu();
+                  }}
+                >
+                  Technologies
+                </button>
+              </li> */}
+              <motion.li whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }}>
+                <button
+                  onClick={() => {
+                    handleScroll(servicesRef);
+                    toggleMenu();
+                  }}
+                >
+                  Services
+                </button>
+              </motion.li>
+              <motion.li whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }}>
+                <button
+                  onClick={() => {
+                    handleScroll(contactRef);
+                    toggleMenu();
+                  }}
+                >
+                  Contact
+                </button>
+              </motion.li>
+            </motion.ul>
           </div>
-        </a>
-        <div className="menu-container  flex justify-end items-center w-[600px] h-[96px] gap-3 lg:gap-20">
-          <span className="flex lg:items-center justify-center gap-2 lg:gap-10">
-            <IconContext.Provider
-              value={{
-                color: "#000",
-                size: "20px",
-                className: "icons-container",
-              }}
-            >
-              <div className="icon cursor-pointer">
-                <FaInstagram />
-              </div>
-              <div className="icon cursor-pointer">
-                <FaFacebookSquare />
-              </div>
-              <div className="icon cursor-pointer">
-                <IoMailOutline />
-              </div>
-            </IconContext.Provider>
-          </span>
+        )}
 
-          <span className="z-50">
-            <IconContext.Provider
-              value={{
-                color: "#000",
-                size: "20px",
-                className: "icons-container",
-              }}
-            >
-              <div className="icon cursor-pointer" onClick={toggleMenu}>
-                {showMenu ? <FaTimes /> : <FaBars />}
-              </div>
-            </IconContext.Provider>
-          </span>
+        <div className="pt-20">
+          <section ref={homeRef}>
+            <Home />
+          </section>
 
-          {showMenu && (
-            <div className="fixed top-0 left-0 w-full h-screen o bg-baby-blue z-40 bg-opacity-90  flex justify-center items-center">
-              {/* <div className="bg-blue-100 rounded-lg p-6 shadow-lg"> */}
-              <div>
-                <ul className="flex flex-col space-y-4 text-center">
-                  <li>
-                    <a
-                      href="#about"
-                      ref={about}
-                      className="text-gray-800 hover:text-gray-600 font-bold"
-                      onClick={() => {
-                        toggleMenu();
-                        scrollHandler(about);
-                      }}
-                    >
-                      About
-                    </a>
-                  </li>
+          <section ref={aboutRef}>
+            <About />
+          </section>
 
-                  <li>
-                    <a
-                      href="#services"
-                      ref={services}
-                      className="text-gray-800 hover:text-gray-600 font-bold"
-                      onClick={() => {
-                        toggleMenu();
-                        scrollHandler(services);
-                      }}
-                    >
-                      Services
-                    </a>
-                  </li>
+          <section ref={servicesRef}>
+            <Services />
+          </section>
 
-                  <li>
-                    <a
-                      href="#projects"
-                      ref={projects}
-                      className="text-gray-800 hover:text-gray-600 font-bold"
-                      onClick={() => {
-                        toggleMenu();
-                        scrollHandler(projects);
-                      }}
-                    >
-                      Projects
-                    </a>
-                  </li>
+          <section ref={technologiesRef}>
+            <Technologies />
+          </section>
 
-                  <li>
-                    <a
-                      ref={contact}
-                      href="#contact"
-                      className="text-gray-800 hover:text-gray-600 font-bold"
-                      onClick={() => {
-                        toggleMenu();
-                        scrollHandler(contact);
-                      }}
-                    >
-                      Contact
-                    </a>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          )}
+          <section ref={contactRef}>
+            <Contact />
+          </section>
         </div>
-      </header>
+      </div>
     </>
   );
-}
+};
 
 export default Header;

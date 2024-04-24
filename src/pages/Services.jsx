@@ -1,85 +1,23 @@
-import React, { useRef } from "react";
+// component import
+import Cards from "../components/Cards";
 
-// components import
+// framer motion import
+import { motion } from "framer-motion";
 
-import { Button } from "@/components/ui/button";
-import { Separator } from "@/components/ui/separator";
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardFooter,
-  CardHeader,
-  CardTitle,
-} from "@/components/ui/card"
-
-
-
-function Services() {
-  const services = useRef();
-
+const Services = () => {
   return (
     <>
-      <section id="services" ref={services} className="pt-[140px] scroll">
-        <div className="h-[100vh] m-10">
-          <div className=" text-center ">
-            <span className=" text-7xl font-semibold ">Our Services</span>
-            <h2 className="text-3xl md:text-4xl  font-bold text-gray-800 mt-24 mb-5">
-              <span className="text-[#189AB4]">Unlock</span> Your Digital
-              Potential
-            </h2>
-            <p className="text-gray-600 text-lg md:text-xl">
-              Let our experts transform your online presence.
-            </p>
-            <Separator className="my-9 mb-20 " />
-
-            <div className=" flex flex-col lg:flex-row gap-10 ">
-              <Card className='lg:w-1/3' >
-  <CardHeader >
-    <CardTitle>Portfolio Webiste</CardTitle>
-    <CardDescription className=''>Starters</CardDescription>
-  </CardHeader>
-  <CardContent>
-    <p className="text-2xl">₹ 5000</p>
-  </CardContent>
-  <CardFooter>
-    <p>Fully Responive, superfast</p>
-  </CardFooter>
-</Card>
-              <Card className='lg:w-1/3' >
-  <CardHeader >
-    <CardTitle>Portfolio Webiste</CardTitle>
-    <CardDescription className=''>Starters</CardDescription>
-  </CardHeader>
-  <CardContent>
-    <p className="text-2xl">₹ 5000</p>
-  </CardContent>
-  <CardFooter>
-    <p>Fully Responive, superfast</p>
-  </CardFooter>
-</Card>
-              <Card className='lg:w-1/3' >
-  <CardHeader >
-    <CardTitle>Portfolio Webiste</CardTitle>
-    <CardDescription className=''>Starters</CardDescription>
-  </CardHeader>
-  <CardContent>
-    <p className="text-2xl">₹ 5000</p>
-  </CardContent>
-  <CardFooter>
-    <p>Fully Responive, superfast</p>
-  </CardFooter>
-</Card>
- </div>
-           
-
-       
-          </div>
-         
-        </div>
-      </section>
+      <motion.h2
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        transition={{ duration: 2 }}
+        className="text-center text-3xl my-4 pt-28 md:text-4xl"
+      >
+        Services
+      </motion.h2>
+      <Cards />
     </>
   );
-}
+};
 
 export default Services;
